@@ -13,10 +13,23 @@ export const routes: Routes = [
         title:'Aequitas Bank'
     },
     {
+        path:'home',
+        component: HomeComponent,
+        title:'Aequitas Bank'
+    },
+    {
         path:'web-acc',
-        component:WebAccComponent,
-        title:'Web Acc'
-        
-
+        component: WebAccComponent,
+        title:'Web Accessibility'
+    },
+    {
+        path:'font-acc',
+        component: WebFontComponent,
+        title:'Font Accessibility'
+    },
+    {
+        path:'colors-acc',
+        component: WebColorComponent,
+        title:'Colors Accessibility'
     }
 ];

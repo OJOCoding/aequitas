@@ -1,0 +1,60 @@
+.web-color-content_1{
+    width: 90%;
+    margin: 0 5vw;
+    }
+    h1{
+        font-size:2.5vw;
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+    } 
+    h2{
+        font-size:1.5vw;
+        font-family: "Merriweather", serif;
+        font-weight: 500;
+        font-style: normal;
+        margin: 2.5vw 5vw;
+        }
+    p{
+        font-size:1.25vw;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 2vw;
+    }
+    .web-color-content_1 img{
+        height:35vw;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .web-color-content_2{
+        width: 90%;
+        margin: 0 5vw;
+        display: flex;
+        flex-direction: row;
+        }
+    .web-color-content_2 p{
+        font-size: 1.5vw;
+        margin-left: 5vw;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 3vw;
+    }    
+    .web-color-content_2 img{
+        object-fit: cover;
+        height: 35vw;
+    }
+    .web-color-content_3{
+        width: 90%;
+        margin: 0 5vw;
+        display: flex;
+        flex-direction: column;
+        }
+    .web-color-content_3 img{
+        width: 60%;
+        object-fit: cover;
+        margin: auto;
+    }

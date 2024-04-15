@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1456.04 272.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1e282f;
+        font-family: Merriweather-Bold, Merriweather;
+        font-size: 223.03px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #1e282f;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-2" d="m155.43,32.65c0,13.89-11.26,26.15-25.15,26.15s-25.15-12.26-25.15-26.15,11.26-25.15,25.15-25.15,25.15,11.26,25.15,25.15Z"/>
+    <line class="cls-2" x1="24.66" y1="76.59" x2="240.64" y2="76.59"/>
+    <polyline class="cls-2" points="106.24 76.59 106.24 173.57 43.22 242.7"/>
+    <polyline class="cls-2" points="159.57 76.59 159.57 172.94 222.88 243.07"/>
+    <polyline class="cls-2" points="198.62 138.72 223.48 89.01 247.14 138.72"/>
+    <path class="cls-2" d="m7.5,138.33c0,19.12,15.5,34.62,34.62,34.62s34.62-15.5,34.62-34.62H7.5Z"/>
+    <path class="cls-2" d="m188.27,138.33c0,19.12,15.5,34.62,34.62,34.62s34.62-15.5,34.62-34.62h-69.23Z"/>
+    <polyline class="cls-2" points="17.86 138.72 42.71 89.01 66.38 138.72"/>
+  </g>
+  <text class="cls-1" transform="translate(283.37 212.02)"><tspan x="0" y="0">AEQUITAS</tspan></text>
+</svg>

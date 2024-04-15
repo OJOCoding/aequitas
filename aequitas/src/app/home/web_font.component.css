@@ -1,0 +1,50 @@
+.web-font-content{
+    width: 90%;
+    margin: 0 5vw;
+    }
+    h1{
+        font-size:2.5vw;
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+    } 
+    h2{
+        font-size:2.5vw;
+        font-family: "Merriweather", serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+    }
+    p{
+        font-size:1.25vw;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 2vw;
+    }
+    .web-acc-image{
+        display: flex;
+        height:35vw;
+        width: 80%;
+        margin:2.5vw 10vw;
+        justify-content:space-between;
+    }
+
+    section.web-font-content:last-of-type {
+        display: flex;
+        flex-direction: row;  
+        margin-top: 5vw; 
+    }
+    .font_exp{
+        margin-left: 5vw;
+    }
+    .font_exp p{
+        font-size: 1.5vw;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 3vw;
+    }
+
+    

@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { StaticHeaderComponent } from '../common/static_header.component';
+import { RouterModule } from '@angular/router';
+import { StaticFooterComponent } from '../common/static_footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [StaticHeaderComponent, RouterModule, StaticFooterComponent],
   templateUrl:'./web_color.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './web_color.component.css'
 })
 export class WebColorComponent {
 
