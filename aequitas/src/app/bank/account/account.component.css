@@ -1,0 +1,12 @@
+hr{
+    height: 40vw;
+    width: 0.1vw;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 5vw;
+    left: 30vw;
+}
+.menu{
+    margin: 5vw;
+}
