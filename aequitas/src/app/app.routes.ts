@@ -7,7 +7,9 @@ import { WebColorComponent } from './home/web_color.component';
 import { DualAuthenticationComponent } from './bank/login_forms/dual_auth.component';
 import { DigitalSignatureComponent } from './bank/login_forms/digital_s.component';
 import { AccountComponent } from './bank/account/account.component';
-
+import { HistoryComponent } from './bank/account/history.component';
+import { MoneyTransferComponent } from './bank/account/transfer.component';
+import { BillPaymentComponent } from './bank/account/bill_payment.component';
 
 export const routes: Routes = [
     {
@@ -43,6 +45,26 @@ export const routes: Routes = [
     {
         path:'account',
         component: AccountComponent,
-        title:'Account'
+        title:'Account Details'
+    },
+    {
+        path:'history',
+        component: HistoryComponent,
+        title:'Transfer History'
+    },
+    {
+        path:'transfer',
+        component: MoneyTransferComponent,
+        title:'Money Transfer'
+    },
+    {
+        path:'bill-payment',
+        component: BillPaymentComponent,
+        title:'Bill Payment'
+    },
+    {
+        path:'aeai-v1',
+        component: AccountComponent,
+        title:'AEAI'
     }
 ];

@@ -4,11 +4,11 @@ import { DynamicHeaderComponent } from '../../common/dynamic_header.component';
 import { StaticFooterV2Component } from '../../common/static_footer_v2.component';
 
 @Component({
-  selector: 'acccount',
+  selector: 'history',
   standalone: true,
   imports: [RouterModule, DynamicHeaderComponent, StaticFooterV2Component],
-  templateUrl:'./account.component.html',
-  styleUrl: './account.component.css'
+  templateUrl:'./history.component.html',
+  styleUrl: './history.component.css'
 })
-export class AccountComponent {
+export class HistoryComponent {
 }

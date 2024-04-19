@@ -1,0 +1,50 @@
+<main>
+    <dynamic-header></dynamic-header>
+    <hr class="main-hr">
+    <section class="account">
+        <section class="menu">
+            <ul>
+                <li>
+                    <a routerLink="/account" routerLinkActive="active"> <img src="/assets/menu_account.png"
+                            alt=" logo">Account</a>
+                </li>
+                <li>
+                    <a routerLink="/history" routerLinkActive="active"> <img src="/assets/menu_history.png"
+                            alt=" logo">Transfer History</a>
+                </li>
+                <li>
+                    <a routerLink="/transfer" routerLinkActive="active"><img src="/assets/menu_transfer.png" alt=" logo"> Money
+                        Transfer</a>
+                </li>
+                <li>
+                    <a routerLink="/bill-payment" routerLinkActive="active"><img src="/assets/menu_bill.png" alt=" logo"> Bill
+                        Payment</a>
+                </li>
+                <li>
+                    <a routerLink="/" routerLinkActive="active"> <img src="/assets/menu_aeai.png" alt=" logo">AEAI</a>
+                </li>
+            </ul>
+        </section>
+        <section class="content">
+            <h2>Money Transfer</h2>
+            <form class="money-transfer-form">
+                <div class="form-group">
+                  <label for="account-id">Account ID</label>
+                  <input type="text" id="account-id" name="account-id" required>
+                </div>
+                <div class="form-group">
+                  <label for="amount">Amount</label>
+                  <input type="text" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <input type="text" id="description" name="description" required>
+                </div>
+                <button class="button-light" type="submit">Complete Transfer</button>
+            </form>            
+              
+        </section>
+        
+    </section>
+    <static-footer-v2></static-footer-v2>
+</main>
