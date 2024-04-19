@@ -10,6 +10,11 @@ import { AccountComponent } from './bank/account/account.component';
 import { HistoryComponent } from './bank/account/history.component';
 import { MoneyTransferComponent } from './bank/account/transfer.component';
 import { BillPaymentComponent } from './bank/account/bill_payment.component';
+import { ProfileComponent } from './bank/account/profile.component';
+import { ProfileEditComponent } from './bank/account/profile_edit.component';
+import { AEAIV2Component } from './bank/account/aeai_v2.component';
+import { AEAIV1Component } from './home/aeai_v1.component';
+import { title } from 'process';
 
 export const routes: Routes = [
     {
@@ -64,7 +69,22 @@ export const routes: Routes = [
     },
     {
         path:'aeai-v1',
-        component: AccountComponent,
+        component: AEAIV1Component,
         title:'AEAI'
+    },
+    {
+        path:'aeai-v2',
+        component: AEAIV2Component,
+        title:'Account AEAI'
+    },
+    {
+        path:'profile',
+        component: ProfileComponent,
+        title:'Profile'
+    },
+    {
+        path:'profile-edit',
+        component: ProfileEditComponent,
+        title:'Profile Edit'
     }
 ];

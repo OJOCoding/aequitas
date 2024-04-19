@@ -1,0 +1,57 @@
+.main-hr {
+    height: 40vw;
+    width: 0.1vw;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 5vw;
+    left: 30vw;
+}
+
+h2{
+    font-size:2vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    line-height: 2vw;
+    font-style: normal;
+}
+h1{
+    font-size:2vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    line-height: 2vw;
+    font-style: normal;
+}
+.account {
+    display: flex;
+    flex-direction: row;
+}
+.content{
+  width: 60vw;
+}
+.edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+table {
+    font-size: 1.25vw;
+    font-family: "Prompt", sans-serif;
+    line-height: 2vw;
+    font-style: normal;
+    background-color: #DEF7EF;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: left;
+    width: 100%;
+    height: 10vw;
+}
+.table table tr th, .table table tr td {
+        width: 25%;
+}
+.edit a{
+    text-decoration: none;
+    color: black;
+}
