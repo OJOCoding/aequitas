@@ -1,0 +1,227 @@
+main {
+    background-color: rgb(222, 247, 239);
+}
+
+.slogan {
+    width: 80vw;
+    margin: 5vw 10vw;
+    text-align: center;
+}
+
+.slogan h1 {
+    font-size: 6rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+}
+
+.slogan p {
+    font-size: 1.25rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.slogan button {
+    margin: 3.5vw 3vw;
+}
+
+.button-dark,
+.button-light {
+    border: none;
+    width: 250px;
+    height: 50px;
+    border-radius: 80px;
+    padding: 0 18px;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+}
+
+.button-dark {
+    background-color: #2E5253;
+    color: #88DABF;
+}
+
+.button-light {
+    background-color: #88DABF;
+    color: #2E5253;
+    font-weight: 700;
+}
+
+.button-dark:focus,
+.button-light:focus {
+    background-color: #5C8375;
+    color: #FFFFFF;
+}
+
+.web-acc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: normal;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sup-image {
+    flex: 1;
+}
+
+.sup-image img {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+}
+
+.font-acc {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.font-acc img {
+    width: 80%;
+    height: 30vw;
+    object-fit: cover;
+    margin: 10vw 10vw 0 10vw;
+}
+
+.font-acc .content {
+    text-align: center;
+    width: 80%;
+    margin: 0 10vw;
+}
+
+.font-acc h2 {
+    font-size: 4.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-acc p {
+    font-size: 1.75vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    line-height: 2vw;
+    font-style: normal;
+}
+
+.colors-acc {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10vw auto; /* Adjust margin as needed */
+}
+
+.colors-acc .content {
+    background-color: #2E5253;
+    text-align: end;
+    padding: 5vw;
+    height: 35vw; /* Adjust height as needed */
+    flex: 1;
+}
+
+.colors-acc h2 {
+    font-size: 3.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    margin-top: 0;
+}
+
+.colors-acc img {
+    width: 40vw;
+    height: 45vw; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.colors-acc p {
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    margin-bottom: 2.5vw;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .colors-acc {
+        flex-direction: column;
+    }
+
+    .colors-acc .content {
+        text-align: center;
+        height: auto;
+    }
+
+    .colors-acc img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media screen and (prefers-contrast: high) {
+
+    body,
+    .slogan,
+    .web-acc,
+    .font-acc,
+    .colors-acc {
+        background-color: black;
+        color: white;
+    }
+
+    .button-dark,
+    .button-light {
+        border: 1px solid white;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .slogan h1,
+    .web-acc h2,
+    .font-acc h2,
+    .colors-acc h2 {
+        font-size: 2rem;
+    }
+
+    .slogan h2,
+    .web-acc p,
+    .font-acc p,
+    .colors-acc p {
+        font-size: 1rem;
+    }
+
+    .button-dark,
+    .button-light {
+        width: 100%;
+        padding: 10px;
+    }
+}

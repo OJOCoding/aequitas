@@ -1,0 +1,28 @@
+.web-acc-content {
+    width: 90%;
+    margin: 0 5vw;
+}
+
+.web-acc-content h1 {
+    font-size: 3rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 2.5vw;
+}
+
+.web-acc-content p {
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+}
+
+img {
+    height: 30vw;
+    object-fit: cover;
+    width: 90%;
+    margin: 5vw;
+}

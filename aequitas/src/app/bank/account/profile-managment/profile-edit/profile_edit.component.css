@@ -1,0 +1,95 @@
+.main-hr {
+  height: 40vw;
+  width: 0.1vw;
+  border: none;
+  background-color: black;
+  position: fixed;
+  top: 5vw;
+  left: 30vw;
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  width: 60vw;
+  height: 40vw;
+}
+
+.button-dark {
+  border: none;
+  height: 3vw;
+  border-radius: 80px;
+  padding: 0 18px;
+  background-color: #2E5253;
+  color: white;
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+form {
+  background-color: #DEF7EF;
+  padding: 2.5vw;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2vw;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0 !important;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cancel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cancel h2 {
+  font-size: 1.75vw;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  line-height: 2vw;
+  font-style: normal;
+  margin: 0;
+}
+
+.cancel img {
+  height: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.input-field {
+  display: flex;
+  width: 100%;
+}
+
+.input-field h2 {
+  min-width: 15vw;
+}

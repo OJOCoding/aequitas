@@ -1,0 +1,98 @@
+<main>
+    <dynamic-header aria-label="Dynamic Header"></dynamic-header>
+    <hr class="main-hr" role="separator" aria-hidden="true">
+    <section class="account" role="region" aria-label="Account Information">
+        <account-menu aria-label="Account Menu"></account-menu>
+        <section class="content" role="main">
+            <h2>Transactions History</h2>
+            <div class="recent_transactions">
+                <mat-form-field>
+                    <mat-label>Month and Year</mat-label>
+                    <input matInput [matDatepicker]="dp" [formControl]="date">
+                    <mat-hint>Pick a month to view</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp startView="multi-year" (monthSelected)="setMonthAndYear($event, dp)"
+                        panelClass="example-month-picker">
+                    </mat-datepicker>
+                </mat-form-field>
+                <div class="entry-list-container" role="list">
+                    <ul class="entry-list" aria-label="Transaction List">
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <li class="entry" role="listitem">
+                            <div class="entry-details">
+                                <div class="entry-name">John Doe</div>
+                                <div class="entry-date">April 15, 2024</div>
+                                <div class="entry-money">$500</div>
+                            </div>
+                        </li>
+                        <!-- Add more transaction entries as needed -->
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <static-footer-v2 aria-label="Static Footer"></static-footer-v2>
+</main>

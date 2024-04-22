@@ -1,0 +1,146 @@
+.main-hr {
+    height: 40vw;
+    width: 0.1vw;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 5vw;
+    left: 30vw;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    width: 60vw;
+}
+
+.entry-list {
+    list-style: none;
+    padding: 0;
+}
+
+.entry {
+    margin-bottom: 2vw;
+}
+
+.entry-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background-color: #FFF;
+    border-radius: 1vw;
+}
+
+.entry-date {
+    margin-left: 2vw;
+}
+
+.entry-name,
+.entry-date,
+.entry-money {
+    flex: 1;
+    font-size: 1.5vw;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    line-height: 2vw;
+    font-style: normal;
+}
+
+.entry-money {
+    text-align: right;
+}
+h2{
+    font-size: 2.5em !important ;
+    font-family: "Josefin Sans", sans-serif !important;
+    line-height: 1.5em !important;
+}
+.entry-list-container {
+    max-height: 25vw;
+    overflow-y: auto;
+}
+
+.paginator {
+    width: 30vw;
+    background-color: #DEF7EF;
+    height: 3vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2vw 15vw;
+    padding: 0.5vw 0;
+    border-radius: 80px;
+}
+
+.paginator span {
+    font-size: 1.5vw;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    line-height: 3vw;
+    font-style: normal;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DEF7EF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #80C8C0;
+}
+
+.example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+    display: none;
+}
+.mat-mdc-icon-button {
+    color: black !important;
+}
+.mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-line-ripple::after {
+    transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    border-bottom-color: black !important;
+}
+label{
+    color: black !important;
+}
+.mat-datepicker-content .mat-calendar{
+    color:black !important;
+}
+
+.mat-calendar-body-selected.mat-calendar-body-today {
+    box-shadow: inset 0 0 0 1px var(--mat-datepicker-calendar-date-today-selected-state-outline-color);
+}
+.mat-calendar-body-cell-content.mat-focus-indicator {
+    position: absolute;
+}
+
+.mat-calendar-body-selected {
+    background-color: #80C8C0 !important;
+    color: var(--mat-datepicker-calendar-date-selected-state-text-color);
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: #80C8C0 !important;
+}
+
+.cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: #80C8C0 !important;
+}

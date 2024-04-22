@@ -1,0 +1,52 @@
+.example-menu {
+    margin: 5vw;
+    width: 25vw;
+}
+
+.example-menu button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    text-decoration: none;
+    font-size: 2vw;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 1.5rem;
+}
+
+.example-menu button:hover {
+    background-color: rgb(208, 208, 208);
+}
+
+.example-menu button:active {
+    background-color: rgb(170, 170, 170);
+}
+
+.example-menu .active {
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+}
+
+.example-menu img {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+@media screen and (max-width: 768px) {
+    .example-menu {
+        width: 80vw;
+    }
+  
+    .example-menu button {
+        font-size: 3vw;
+    }
+}

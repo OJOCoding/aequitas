@@ -1,20 +1,20 @@
 // app.routes.ts
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { WebAccComponent } from './home/web_acc.component';
-import { WebFontComponent } from './home/web_font.component';
-import { WebColorComponent } from './home/web_color.component';
-import { DualAuthenticationComponent } from './bank/login_forms/dual_auth.component';
-import { DigitalSignatureComponent } from './bank/login_forms/digital_s.component';
-import { AccountComponent } from './bank/account/account.component';
-import { HistoryComponent } from './bank/account/history.component';
-import { MoneyTransferComponent } from './bank/account/transfer.component';
-import { BillPaymentComponent } from './bank/account/bill_payment.component';
-import { ProfileComponent } from './bank/account/profile.component';
-import { ProfileEditComponent } from './bank/account/profile_edit.component';
-import { AEAIV2Component } from './bank/account/aeai_v2.component';
-import { AEAIV1Component } from './home/aeai_v1.component';
+import { HomeComponent } from './home/aequitas-landing/home.component';
+import { WebAccComponent } from './home/aequitas-web-acc/web_acc.component';
+import { WebFontComponent } from './home/aequitas-font-acc/web_font.component';
+import { WebColorComponent } from './home/aequitas-colors-acc/web_color.component';
+import { DigitalSignatureComponent } from './bank/login_forms/digital-signature-login/digital_s.component';
+import { AccountComponent } from './bank/account/account/account.component';
+import { HistoryComponent } from './bank/account/transfer-history/history.component';
+import { MoneyTransferComponent } from './bank/account/transfer/transfer.component';
+import { BillPaymentComponent } from './bank/account/bill-payment/bill_payment.component';
+import { ProfileComponent } from './bank/account/profile-managment/profile/profile.component';
+import { ProfileEditComponent } from './bank/account/profile-managment/profile-edit/profile_edit.component';
+import { AEAIV2Component } from './bank/account/aeai/aeai_v2.component';
+import { AEAIV1Component } from './home/aequitas-aeai/aeai_v1.component';
 import { title } from 'process';
+import { SimpleAuthenticationComponent } from './bank/login_forms/simple-login/simple_auth.component';
 
 export const routes: Routes = [
     {
@@ -40,12 +40,12 @@ export const routes: Routes = [
     {
         path:'digital-s',
         component: DigitalSignatureComponent,
-        title:'Login DS Version'
+        title:'Login Digital Signature Version'
     },
     {
-        path:'dual-auth',
-        component: DualAuthenticationComponent,
-        title:'Login DA Version'
+        path:'simple-auth',
+        component: SimpleAuthenticationComponent,
+        title:'Login Simple Authentication Version'
     },
     {
         path:'account',

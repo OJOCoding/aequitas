@@ -1,0 +1,83 @@
+.main-hr {
+    height: 40vw;
+    width: 0.1vw;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 5vw;
+    left: 30vw;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    width: 60%;
+    height: 70%;
+    overflow-y: auto;
+}
+
+.entry-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Display as single column */
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.entry-details {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry-name,
+.entry-date,
+.entry-money {
+    flex: 1;
+    font-size: 2em;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.entry-name {
+    font-weight: 400;
+}
+
+.entry-money {
+    text-align: right;
+}
+
+.balance p {
+    font-size: 2rem;
+    line-height: 1.5em;
+    margin-top: 3%;
+}
+
+.account hr {
+    margin: 5% 0;
+    height: 0.1vw;
+    background-color: black;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.5em;
+    margin-top: 5%;
+}

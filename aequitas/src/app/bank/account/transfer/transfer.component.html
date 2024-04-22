@@ -1,0 +1,41 @@
+<main>
+  <dynamic-header></dynamic-header>
+  <hr class="main-hr">
+  <section class="account">
+    <account-menu></account-menu>
+    <section class="content">
+      <h2>Money Transfer</h2>
+      <form class="money-transfer-form" aria-labelledby="transferFormHeading">
+        <h2 id="transferFormHeading" class="visually-hidden">Money Transfer Form</h2>
+        <h2>Account ID</h2>
+        <mat-form-field class="input-full-width">
+          <mat-label>Account ID</mat-label>
+          <input type="text" matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+            placeholder="Ex. BR132345" aria-describedby="accountIdHelp accountIdError">
+          <span id="accountIdHelp" class="visually-hidden">Enter the account ID, example: BR132345.</span>
+          @if (nameFormControl.hasError('required')) {
+          <mat-error id="accountIdError">Account Id is <strong>required</strong></mat-error>
+          }
+        </mat-form-field>
+        <h2>Transfer Amount</h2>
+        <mat-form-field class="input-full-width">
+          <mat-label>Transfer Ammount</mat-label>
+          <input type="number" matInput [formControl]="amountFormControl" [errorStateMatcher]="matcher"
+            placeholder="Ex. 34" aria-describedby="amountHelp amountError">
+          <span id="amountHelp" class="visually-hidden">Please enter the transfer amount, example: 34.</span>
+          @if (amountFormControl.hasError('required')) {
+          <mat-error id="amountError">The transfer amount is <strong>required</strong></mat-error>
+          }</mat-form-field>
+          <h2>Description</h2>
+        <mat-form-field class="input-full-width">
+          <mat-label>Description</mat-label>
+          <input type="text" matInput placeholder="Ex. Rent Payment" aria-describedby="descriptionHelp">
+          <span id="descriptionHelp" class="visually-hidden">Enter a description for the transaction, example: Rent
+            Payment.</span>
+        </mat-form-field>
+        <button class="button-light" type="submit">Complete Transfer</button>
+      </form>
+    </section>
+  </section>
+  <static-footer-v2></static-footer-v2>
+</main>

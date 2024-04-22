@@ -1,0 +1,18 @@
+<main>
+  <div class="nav">
+    <a routerLink="/">
+      <img src="/assets/aequitas_logo.svg" alt="Aequitas Logo">
+    </a>
+    <button [cdkMenuTriggerFor]="menu" class="example-standalone-trigger">John Doe
+      <span class="material-symbols-outlined">
+        expand_more
+      </span>
+    </button> 
+    <ng-template #menu>
+      <div class="profile-menu" cdkMenu>
+        <button class="profile-menu-item" routerLink="/profile" cdkMenuItem>Profile</button>
+        <button class="profile-menu-item" routerLink="/" cdkMenuItem>Sign out</button>
+      </div>
+    </ng-template>
+  </div>
+</main>
