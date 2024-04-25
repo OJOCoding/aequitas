@@ -11,26 +11,12 @@
             <hr role="separator" aria-hidden="true">
             <div class="recent_transactions">
                 <h2>Recent Transactions</h2>
-                <ul class="entry-list" role="list">
-                    <li class="entry" role="listitem">
+                <ul class="entry-list" aria-label="Transaction List">
+                    <li class="entry" role="listitem" *ngFor = "let data of userData |async">
                         <div class="entry-details">
-                            <div class="entry-name">John Doe</div>
-                            <div class="entry-date">April 15, 2024</div>
-                            <div class="entry-money">$500</div>
-                        </div>
-                    </li>
-                    <li class="entry" role="listitem">
-                        <div class="entry-details">
-                            <div class="entry-name">Jane Smith</div>
-                            <div class="entry-date">April 16, 2024</div>
-                            <div class="entry-money">$700</div>
-                        </div>
-                    </li>
-                    <li class="entry" role="listitem">
-                        <div class="entry-details">
-                            <div class="entry-name">Bob Johnson</div>
-                            <div class="entry-date">April 17, 2024</div>
-                            <div class="entry-money">$300</div>
+                            <div class="entry-name">{{data.Rec_ID}}</div>
+                            <div class="entry-date">{{data.Description}}</div>
+                            <div class="entry-money">${{data.Amount}}</div>
                         </div>
                     </li>
                 </ul>

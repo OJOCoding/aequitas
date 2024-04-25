@@ -17,77 +17,13 @@
                 </mat-form-field>
                 <div class="entry-list-container" role="list">
                     <ul class="entry-list" aria-label="Transaction List">
-                        <li class="entry" role="listitem">
+                        <li class="entry" role="listitem" *ngFor = "let data of userData |async">
                             <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
+                                <div class="entry-name">{{data.Rec_ID}}</div>
+                                <div class="entry-date">{{data.Description}}</div>
+                                <div class="entry-money">${{data.Amount}}</div>
                             </div>
                         </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <li class="entry" role="listitem">
-                            <div class="entry-details">
-                                <div class="entry-name">John Doe</div>
-                                <div class="entry-date">April 15, 2024</div>
-                                <div class="entry-money">$500</div>
-                            </div>
-                        </li>
-                        <!-- Add more transaction entries as needed -->
                     </ul>
                 </div>
             </div>

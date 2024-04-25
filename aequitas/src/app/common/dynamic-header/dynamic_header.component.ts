@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./dynamic_header.component.css'],
   imports: [
     CommonModule,
-    CdkMenuModule // Import the CdkMenuModule here
+    CdkMenuModule, RouterModule // Import the CdkMenuModule here
   ]
 })
 export class DynamicHeaderComponent implements OnInit {

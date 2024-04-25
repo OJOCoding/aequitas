@@ -4,18 +4,23 @@ import { DynamicHeaderComponent } from '../../../common/dynamic-header/dynamic_h
 import { StaticFooterV2Component } from '../../../common/static-footer-v2/static_footer_v2.component';
 import { AccountMenuComponent } from '../../../common/menu/account_menu.component';
 import { AuthService } from '../../../services/auth_service';
+import { Observable } from 'rxjs';
+import { Firestore, collection, collectionData, limit, query } from '@angular/fire/firestore';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'acccount',
   standalone: true,
-  imports: [RouterModule, DynamicHeaderComponent, StaticFooterV2Component, AccountMenuComponent],
+  imports: [RouterModule, DynamicHeaderComponent, StaticFooterV2Component, CommonModule,AccountMenuComponent],
   templateUrl:'./account.component.html',
   styleUrl: './account.component.css'
 })export class AccountComponent implements OnInit {
   userName: string = '';
   balance: number | null = null;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private firestore: Firestore) { 
+    this.getData();
+  }
 
   async ngOnInit(): Promise<void> {
     // Retrieve the user's ID from AuthService
@@ -41,5 +46,16 @@ import { AuthService } from '../../../services/auth_service';
     } catch (error) {
         console.error('Error getting account details:', error);
     }
+  }
+  userData!: Observable<any>;
+ 
+  getData() {
+    const collectionInstance = collection(this.firestore, 'transfers');
+    const limitedCollectionInstance = query(collectionInstance, limit(3));
+  
+    this.userData = collectionData(limitedCollectionInstance, { idField: 'ID' });
+    this.userData.subscribe(val => {
+      console.log(val);
+    });
   }
 }

@@ -11,14 +11,16 @@ export class AuthService {
 
   login(userId: string) {
     this.userId = userId;
+    localStorage.setItem('userId', userId);
   }
-
+  
   logout() {
     this.userId = null;
+    localStorage.removeItem('userId');
   }
-
+  
   getUserId(): string | null {
-    return this.userId;
+    return this.userId || localStorage.getItem('userId');
   }
   async getUserDetailsById(userId: string | null): Promise<any> {
     try {
