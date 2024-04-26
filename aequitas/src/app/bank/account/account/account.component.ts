@@ -8,12 +8,16 @@ import { Observable } from 'rxjs';
 import { Firestore, collection, collectionData, limit, query } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 @Component({
   selector: 'acccount',
   standalone: true,
-  imports: [RouterModule, DynamicHeaderComponent, StaticFooterV2Component, CommonModule,AccountMenuComponent],
+  imports: [CommonModule,RouterModule, DynamicHeaderComponent, StaticFooterV2Component, CommonModule,AccountMenuComponent],
   templateUrl:'./account.component.html',
-  styleUrl: './account.component.css'
+  styleUrl: './account.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })export class AccountComponent implements OnInit {
   userName: string = '';
   balance: number | null = null;

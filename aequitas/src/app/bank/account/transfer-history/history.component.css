@@ -144,3 +144,13 @@ label{
 .cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
     background-color: #80C8C0 !important;
 }
+df-messenger {
+    --df-messenger-bot-message: #148561;
+    --df-messenger-button-titlebar-color: #2E5253;
+    --df-messenger-chat-background-color: #fafafa;
+    --df-messenger-font-color: white;
+    --df-messenger-send-icon: #878fac;
+    --df-messenger-user-message: #29847A;
+    margin: 2vw;
+   }
+ 

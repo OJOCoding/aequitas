@@ -15,76 +15,84 @@ import { AEAIV2Component } from './bank/account/aeai/aeai_v2.component';
 import { AEAIV1Component } from './home/aequitas-aeai/aeai_v1.component';
 import { title } from 'process';
 import { SimpleAuthenticationComponent } from './bank/login_forms/simple-login/simple_auth.component';
+import { AuthGuard } from './services/auth_guard';
 
 export const routes: Routes = [
     {
-        path:'',
+        path: '',
         component: HomeComponent,
-        title:'Aequitas Bank'
+        title: 'Aequitas Bank'
     },
     {
-        path:'web-acc',
+        path: 'web-acc',
         component: WebAccComponent,
-        title:'Web Accessibility'
+        title: 'Web Accessibility'
     },
     {
-        path:'font-acc',
+        path: 'font-acc',
         component: WebFontComponent,
-        title:'Font Accessibility'
+        title: 'Font Accessibility'
     },
     {
-        path:'colors-acc',
+        path: 'colors-acc',
         component: WebColorComponent,
-        title:'Colors Accessibility'
+        title: 'Colors Accessibility'
     },
     {
-        path:'digital-s',
+        path: 'digital-s',
         component: DigitalSignatureComponent,
-        title:'Login Digital Signature Version'
+        title: 'Login Digital Signature Version'
     },
     {
-        path:'simple-auth',
+        path: 'simple-auth',
         component: SimpleAuthenticationComponent,
-        title:'Login Simple Authentication Version'
+        title: 'Login Simple Authentication Version'
     },
     {
-        path:'account',
+        path: 'account',
         component: AccountComponent,
-        title:'Account Details'
+        title: 'Account Details', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'history',
+        path: 'history',
         component: HistoryComponent,
-        title:'Transfer History'
+        title: 'Transfer History', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'transfer',
+        path: 'transfer',
         component: MoneyTransferComponent,
-        title:'Money Transfer'
+        title: 'Money Transfer', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'bill-payment',
+        path: 'bill-payment',
         component: BillPaymentComponent,
-        title:'Bill Payment'
+        title: 'Bill Payment', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'aeai-v1',
+        path: 'aeai-v1',
         component: AEAIV1Component,
-        title:'AEAI'
+        title: 'AEAI'
     },
     {
-        path:'aeai-v2',
+        path: 'aeai-v2',
         component: AEAIV2Component,
-        title:'Account AEAI'
+        title: 'Account AEAI', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'profile',
+        path: 'profile',
         component: ProfileComponent,
-        title:'Profile'
+        title: 'Profile', 
+        canActivate: [AuthGuard]
     },
     {
-        path:'profile-edit',
+        path: 'profile-edit',
         component: ProfileEditComponent,
-        title:'Profile Edit'
+        title: 'Profile Edit', 
+        canActivate: [AuthGuard]
     }
 ];

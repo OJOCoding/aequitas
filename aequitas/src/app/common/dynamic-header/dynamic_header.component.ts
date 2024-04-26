@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from '../../home/aequitas-landing/home.component';
-import {CdkMenu, CdkMenuItem, CdkMenuModule, CdkMenuTrigger} from '@angular/cdk/menu';
+import { CdkMenu, CdkMenuItem, CdkMenuModule, CdkMenuTrigger } from '@angular/cdk/menu';
 import { AuthService } from '../../services/auth_service';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./dynamic_header.component.css'],
   imports: [
     CommonModule,
-    CdkMenuModule, RouterModule // Import the CdkMenuModule here
+    CdkMenuModule,
+    RouterModule // Import the CdkMenuModule here
   ]
 })
 export class DynamicHeaderComponent implements OnInit {
@@ -40,5 +41,9 @@ export class DynamicHeaderComponent implements OnInit {
     } else {
       console.error('User ID is null');
     }
+  }
+
+  logout(): void {
+    this.authService.clearUserId(); // Call the method to clear the userID
   }
 }

@@ -11,7 +11,7 @@
     <ng-template #menu>
       <div class="profile-menu" cdkMenu>
         <button class="profile-menu-item" routerLink="/profile" cdkMenuItem>Profile</button>
-        <button class="profile-menu-item" routerLink="/" cdkMenuItem>Sign out</button>
+        <button class="profile-menu-item" (click)="logout()" routerLink="/" cdkMenuItem>Sign out</button>
       </div>
     </ng-template>
   </div>

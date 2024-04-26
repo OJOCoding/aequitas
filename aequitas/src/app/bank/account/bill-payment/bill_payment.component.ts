@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { DynamicHeaderComponent } from '../../../common/dynamic-header/dynamic_header.component';
 import { StaticFooterV2Component } from '../../../common/static-footer-v2/static_footer_v2.component';
 import { AccountMenuComponent } from '../../../common/menu/account_menu.component';
@@ -14,10 +14,11 @@ import {
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TransactionService } from '../../../services/transfer';
 import { AuthService } from '../../../services/auth_service';
 import { Firestore, Timestamp, addDoc, collection } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -31,7 +32,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   standalone: true,
   imports: [RouterModule, DynamicHeaderComponent, StaticFooterV2Component, AccountMenuComponent,FormsModule, MatFormFieldModule,CommonModule, MatInputModule, ReactiveFormsModule],
   templateUrl:'./bill_payment.component.html',
-  styleUrl: './bill_payment.component.css'
+  styleUrl: './bill_payment.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class BillPaymentComponent {
   amountFormControl = new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]);
@@ -39,7 +41,8 @@ export class BillPaymentComponent {
   nameFormControl = new FormControl('', [Validators.required]);
   accountIdFormControl = new FormControl('', [Validators.required]); // Account ID for recipient
 
-  constructor(private firestore: Firestore, private authService: AuthService) {}
+  constructor(private snackBar: MatSnackBar,
+    private router: Router,private firestore: Firestore, private authService: AuthService) {}
 
   async transfer(f: NgForm): Promise<void> {
     console.log('Submitting Form:', f.value);
@@ -61,8 +64,14 @@ export class BillPaymentComponent {
 
       const collectionInstance = collection(this.firestore, 'transfers');
       addDoc(collectionInstance, transferData).then(() => {
-        console.log('Transfer recorded successfully');
+        console.log('Payment recorded successfully');
+        this.snackBar.open('Payment recorded successfully', 'Close', {
+          duration: 2000, // Duration in milliseconds
+          verticalPosition: 'top', // Position top
+          horizontalPosition: 'center', // Center horizontally
+        });
         f.resetForm();  // Reset the form after successful submission
+        this.router.navigate(['/account']); // Navigate to the /account route
       }).catch((error) => {
         console.error('Error recording transfer:', error);
       });
@@ -70,7 +79,6 @@ export class BillPaymentComponent {
       console.error('Form is invalid');
     }
   }
-
   private generateTransactionId(): string {
     // Simple random ID generator; adapt as needed for your use case
     return 'TR_' + Math.floor(100000 + Math.random() * 900000);

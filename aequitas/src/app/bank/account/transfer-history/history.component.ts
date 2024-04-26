@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideMomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
@@ -32,6 +32,7 @@ export const MY_FORMATS = {
   selector: 'history',
   standalone: true,
   imports: [
+    CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
@@ -45,6 +46,7 @@ export const MY_FORMATS = {
   ],
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     provideMomentDateAdapter(MY_FORMATS),
   ],

@@ -9,4 +9,24 @@ h1{
     font-style: normal;
     text-align: center;
 }
-
+.aeai{
+    display: flex;
+    width: 90vw;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30vw;
+    margin: 5vw;
+}
+p{
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0;
+    padding: 2vw;
+    line-height: normal;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+iframe{
+    width: 50%;
+}

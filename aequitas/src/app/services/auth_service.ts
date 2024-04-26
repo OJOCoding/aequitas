@@ -14,13 +14,20 @@ export class AuthService {
     localStorage.setItem('userId', userId);
   }
   
+ 
   logout() {
-    this.userId = null;
+    this.clearUserId(); 
     localStorage.removeItem('userId');
   }
   
   getUserId(): string | null {
     return this.userId || localStorage.getItem('userId');
+  }
+
+  clearUserId(): void {
+    this.userId = null;
+    localStorage.removeItem('userId');
+
   }
   async getUserDetailsById(userId: string | null): Promise<any> {
     try {

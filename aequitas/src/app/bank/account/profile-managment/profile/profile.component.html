@@ -4,54 +4,58 @@
     <section class="account">
         <account-menu></account-menu>
         <section class="content" aria-label="Profile Content">
-            <ng-container *ngIf="(userData | async) as userDataResolved">
-                <ng-container *ngIf="(accountData | async) as accountDataResolved">
-                    <h1>Hello, <span>John Doe</span></h1>
-                    <div class="edit" role="group" aria-labelledby="personalInfoHeading editLink">
-                        <h2 id="personalInfoHeading">Personal information</h2>
-                        <h2 id="editLink"><a routerLink="/profile-edit" aria-label="Edit Personal Information">Edit</a>
-                        </h2>
-                    </div>
-                    <div class="table" role="region" aria-labelledby="personalInfoHeading">
-                        <table>
-                            <tbody>
-                                <tr *ngFor="let data of userData | async">
-                                    <th scope="row">Full Name:</th>
-                                    <td id="full_name">{{ data.cust_name }}</td>
-                                    <th scope="row">Address:</th>
-                                    <td id="address">{{ data.cust_address }}</td>
-                                </tr>
-                                <tr *ngFor="let data of userData | async">
-                                    <th scope="row">Phone Number:</th>
-                                    <td id="full_name">{{ data.cust_phone }}</td>
-                                    <th scope="row">Email:</th>
-                                    <td id="address">{{ data.cust_email }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h2 id="accountInfoHeading">Account information</h2>
-                    <div class="table" role="region" aria-labelledby="accountInfoHeading">
-                        <table aria-describedby="accountInfo">
-                            <tbody>
-                                <tr *ngFor="let data of accountData | async">
-                                    <th scope="row">Phone Number:</th>
-                                    <td id="full_name">{{ data.cust_phone }}</td>
-                                    <th scope="row">Email:</th>
-                                    <td id="address">{{ data.cust_email }}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Account Type:</th>
-                                    <td id="acc_type">Checkings</td>
-                                    <th scope="row">Current Balance:</th>
-                                    <td id="acc_balance">420.69 $</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </ng-container>
-            </ng-container>
+            <h1>Hello, <span>{{ userData?.cust_name }}</span></h1>
+            <div class="edit" role="group" aria-labelledby="personalInfoHeading editLink">
+                <h2 id="personalInfoHeading">Personal information</h2>
+                <h2 id="editLink"><a routerLink="/profile-edit" aria-label="Edit Personal Information">Edit</a></h2>
+            </div>
+            <div class="table" role="region" aria-labelledby="personalInfoHeading">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Full Name:</th>
+                            <td id="full_name">{{ userData?.cust_name }}</td>
+                            <th scope="row">Address:</th>
+                            <td id="address">{{ userData?.cust_address }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone Number:</th>
+                            <td id="phone_number">{{ userData?.cust_phone }}</td>
+                            <th scope="row">Email:</th>
+                            <td id="email">{{ userData?.cust_email }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 id="accountInfoHeading">Account information</h2>
+            <div class="table" role="region" aria-labelledby="accountInfoHeading">
+                <table aria-describedby="accountInfo">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Account ID:</th>
+                            <td id="account_id">{{ accountData?.ac_id }}</td>
+                            <th scope="row">Account Type:</th>
+                            <td id="account_type">{{ accountData?.ac_type }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Current Balance:</th>
+                            <td id="current_balance">{{ accountData?.ac_balance }}</td>
+                            <th scope="row">Open Date:</th>
+                            <td id="current_balance">{{ accountData?.ac_odate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </section>
+    
+    <df-messenger
+    class="test"
+    intent="WELCOME"
+    chat-title="AEAI"
+    chat-icon="https:&#x2F;&#x2F;cdn-icons-png.freepik.com&#x2F;256&#x2F;13481&#x2F;13481626.png?semt=ais_hybrid"
+    agent-id="f6620496-6d54-4e83-bf0b-855345675e33"
+    language-code="en"
+  ></df-messenger>
     <static-footer-v2></static-footer-v2>
 </main>
