@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:aequitas": "node dist/aequitas/server/server.mjs",
-    "deploy": "ng build && firebase deploy"
+    "deploy": "ng build && firebase deploy",
+    "build-prod": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod"
   },
   "private": true,
   "dependencies": {
